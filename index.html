@@ -3,193 +3,249 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Itinerary & Budget</title>
+<title>Japan Winter Travel Itinerary</title>
 
 <style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:Arial, Helvetica, sans-serif;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-    body{
-        background:#f4f7fb;
-        padding:30px;
-    }
+body{
+    overflow-x:hidden;
+    background:linear-gradient(#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+}
 
-    .container{
-        max-width:1000px;
-        margin:auto;
-        background:#fff;
-        border-radius:10px;
-        box-shadow:0 5px 15px rgba(0,0,0,0.15);
-        overflow:hidden;
-    }
+/* Snow Background */
+.snow{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+}
 
-    .header{
-        background:#0d6efd;
-        color:white;
-        text-align:center;
-        padding:25px;
-    }
+.snow span{
+    position:absolute;
+    top:-10px;
+    width:8px;
+    height:8px;
+    background:white;
+    border-radius:50%;
+    opacity:.9;
+    animation:fall linear infinite;
+}
 
-    .header h1{
-        margin-bottom:10px;
+@keyframes fall{
+    from{
+        transform:translateY(-10px);
     }
+    to{
+        transform:translateY(110vh);
+    }
+}
 
-    .content{
-        display:grid;
-        grid-template-columns:2fr 1fr;
-        gap:20px;
-        padding:25px;
-    }
+/* Different snow speeds */
+.snow span:nth-child(1){left:5%;animation-duration:8s;animation-delay:0s;}
+.snow span:nth-child(2){left:10%;animation-duration:10s;}
+.snow span:nth-child(3){left:18%;animation-duration:12s;}
+.snow span:nth-child(4){left:25%;animation-duration:9s;}
+.snow span:nth-child(5){left:32%;animation-duration:11s;}
+.snow span:nth-child(6){left:40%;animation-duration:13s;}
+.snow span:nth-child(7){left:48%;animation-duration:10s;}
+.snow span:nth-child(8){left:55%;animation-duration:9s;}
+.snow span:nth-child(9){left:63%;animation-duration:12s;}
+.snow span:nth-child(10){left:70%;animation-duration:11s;}
+.snow span:nth-child(11){left:77%;animation-duration:10s;}
+.snow span:nth-child(12){left:85%;animation-duration:14s;}
+.snow span:nth-child(13){left:92%;animation-duration:12s;}
+.snow span:nth-child(14){left:97%;animation-duration:9s;}
+.snow span:nth-child(15){left:50%;animation-duration:15s;}
 
-    .card{
-        background:#fafafa;
-        border-radius:8px;
-        padding:20px;
-        border:1px solid #ddd;
-    }
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    position:relative;
+    z-index:10;
+}
 
-    h2{
-        color:#0d6efd;
-        margin-bottom:15px;
-    }
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
 
-    table{
-        width:100%;
-        border-collapse:collapse;
-    }
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
 
-    table th{
-        background:#0d6efd;
-        color:white;
-    }
+header p{
+    color:#d9ecff;
+    font-size:18px;
+}
 
-    table th,
-    table td{
-        padding:10px;
-        border:1px solid #ddd;
-        text-align:left;
-    }
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+    border:1px solid rgba(255,255,255,.2);
+}
 
-    table tr:nth-child(even){
-        background:#f8f8f8;
-    }
+.card h2{
+    margin-bottom:15px;
+    color:#fff;
+}
 
-    .total{
-        text-align:right;
-        margin-top:15px;
-        font-size:18px;
-        font-weight:bold;
-        color:#198754;
-    }
+table{
+    width:100%;
+    border-collapse:collapse;
+}
 
-    @media(max-width:768px){
-        .content{
-            grid-template-columns:1fr;
-        }
-    }
+th{
+    background:rgba(255,255,255,.15);
+}
+
+th,td{
+    padding:14px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    text-align:left;
+}
+
+tr:hover{
+    background:rgba(255,255,255,.08);
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#ddd;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:30px;
+}
+
+th,td{
+    font-size:14px;
+    padding:10px;
+}
+
+}
+
 </style>
 
 </head>
 <body>
 
+<div class="snow">
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+</div>
+
 <div class="container">
 
-    <div class="header">
-        <h1>🌏 Travel Itinerary</h1>
-        <p>Destination: Bali, Indonesia</p>
-        <p>Duration: 5 Days 4 Nights</p>
-    </div>
+<header>
+<h1>❄️ Japan Winter Adventure 🇯🇵</h1>
+<p>7 Days • Tokyo • Mt. Fuji • Kyoto • Osaka</p>
+</header>
 
-    <div class="content">
+<div class="card">
 
-        <div class="card">
-            <h2>Daily Itinerary</h2>
+<h2>📅 Travel Itinerary</h2>
 
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Activities</th>
-                </tr>
+<table>
 
-                <tr>
-                    <td>Day 1</td>
-                    <td>Arrival, Hotel Check-in, Sunset at Kuta Beach</td>
-                </tr>
+<tr>
+<th>Day</th>
+<th>Destination</th>
+<th>Activities</th>
+</tr>
 
-                <tr>
-                    <td>Day 2</td>
-                    <td>Ubud Tour, Rice Terrace, Monkey Forest</td>
-                </tr>
+<tr>
+<td>Day 1</td>
+<td>Tokyo</td>
+<td>Arrive in Tokyo, Shibuya Crossing, Hachiko Statue, Dinner at Shinjuku.</td>
+</tr>
 
-                <tr>
-                    <td>Day 3</td>
-                    <td>Island Tour, Snorkeling & Beach Relaxation</td>
-                </tr>
+<tr>
+<td>Day 2</td>
+<td>Tokyo</td>
+<td>Visit Sensoji Temple, Tokyo Skytree, Akihabara, TeamLab.</td>
+</tr>
 
-                <tr>
-                    <td>Day 4</td>
-                    <td>Temple Visit, Shopping, Local Food</td>
-                </tr>
+<tr>
+<td>Day 3</td>
+<td>Mt. Fuji</td>
+<td>Lake Kawaguchi, Chureito Pagoda, Snow sightseeing, Onsen.</td>
+</tr>
 
-                <tr>
-                    <td>Day 5</td>
-                    <td>Breakfast, Check-out, Airport Transfer</td>
-                </tr>
+<tr>
+<td>Day 4</td>
+<td>Kyoto</td>
+<td>Fushimi Inari Shrine, Bamboo Forest, Gion District.</td>
+</tr>
 
-            </table>
+<tr>
+<td>Day 5</td>
+<td>Nara</td>
+<td>Nara Deer Park, Todaiji Temple, Matcha Café.</td>
+</tr>
 
-        </div>
+<tr>
+<td>Day 6</td>
+<td>Osaka</td>
+<td>Osaka Castle, Dotonbori, Shopping at Shinsaibashi.</td>
+</tr>
 
-        <div class="card">
-            <h2>Trip Budget</h2>
+<tr>
+<td>Day 7</td>
+<td>Osaka</td>
+<td>Breakfast, Last-minute shopping, Departure.</td>
+</tr>
 
-            <table>
-
-                <tr>
-                    <th>Item</th>
-                    <th>Cost</th>
-                </tr>
-
-                <tr>
-                    <td>Flight</td>
-                    <td>$250</td>
-                </tr>
-
-                <tr>
-                    <td>Hotel</td>
-                    <td>$320</td>
-                </tr>
-
-                <tr>
-                    <td>Food</td>
-                    <td>$150</td>
-                </tr>
-
-                <tr>
-                    <td>Transport</td>
-                    <td>$80</td>
-                </tr>
-
-                <tr>
-                    <td>Activities</td>
-                    <td>$200</td>
-                </tr>
-
-            </table>
-
-            <div class="total">
-                Total: $1,000
-            </div>
-
-        </div>
-
-    </div>
+</table>
 
 </div>
 
+<div class="card">
+
+<h2>🎒 Travel Checklist</h2>
+
+<table>
+
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+
+<tr><td>Passport</td><td>✅</td></tr>
+<tr><td>Visa (if required)</td><td>✅</td></tr>
+<tr><td>JR Pass</td><td>✅</td></tr>
+<tr><td>Winter Jacket</td><td>✅</td></tr>
+<tr><td>Gloves & Scarf</td><td>✅</td></tr>
+<tr><td>Camera</td><td>📷</td></tr>
+
+</table>
+
+</div>
+
+<div class="footer">
+Made with ❤️ for your Japan Winter Vacation
+</div>
+
+</div>
+<elevenlabs-convai agent-id="agent_8301kwb9akcnek78bybdg249hgk2"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
