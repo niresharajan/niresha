@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Itinerary & Budget</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background:#f4f7fb;
+        padding:30px;
+    }
+
+    .container{
+        max-width:1000px;
+        margin:auto;
+        background:#fff;
+        border-radius:10px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.15);
+        overflow:hidden;
+    }
+
+    .header{
+        background:#0d6efd;
+        color:white;
+        text-align:center;
+        padding:25px;
+    }
+
+    .header h1{
+        margin-bottom:10px;
+    }
+
+    .content{
+        display:grid;
+        grid-template-columns:2fr 1fr;
+        gap:20px;
+        padding:25px;
+    }
+
+    .card{
+        background:#fafafa;
+        border-radius:8px;
+        padding:20px;
+        border:1px solid #ddd;
+    }
+
+    h2{
+        color:#0d6efd;
+        margin-bottom:15px;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+    }
+
+    table th{
+        background:#0d6efd;
+        color:white;
+    }
+
+    table th,
+    table td{
+        padding:10px;
+        border:1px solid #ddd;
+        text-align:left;
+    }
+
+    table tr:nth-child(even){
+        background:#f8f8f8;
+    }
+
+    .total{
+        text-align:right;
+        margin-top:15px;
+        font-size:18px;
+        font-weight:bold;
+        color:#198754;
+    }
+
+    @media(max-width:768px){
+        .content{
+            grid-template-columns:1fr;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🌏 Travel Itinerary</h1>
+        <p>Destination: Bali, Indonesia</p>
+        <p>Duration: 5 Days 4 Nights</p>
+    </div>
+
+    <div class="content">
+
+        <div class="card">
+            <h2>Daily Itinerary</h2>
+
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Activities</th>
+                </tr>
+
+                <tr>
+                    <td>Day 1</td>
+                    <td>Arrival, Hotel Check-in, Sunset at Kuta Beach</td>
+                </tr>
+
+                <tr>
+                    <td>Day 2</td>
+                    <td>Ubud Tour, Rice Terrace, Monkey Forest</td>
+                </tr>
+
+                <tr>
+                    <td>Day 3</td>
+                    <td>Island Tour, Snorkeling & Beach Relaxation</td>
+                </tr>
+
+                <tr>
+                    <td>Day 4</td>
+                    <td>Temple Visit, Shopping, Local Food</td>
+                </tr>
+
+                <tr>
+                    <td>Day 5</td>
+                    <td>Breakfast, Check-out, Airport Transfer</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="card">
+            <h2>Trip Budget</h2>
+
+            <table>
+
+                <tr>
+                    <th>Item</th>
+                    <th>Cost</th>
+                </tr>
+
+                <tr>
+                    <td>Flight</td>
+                    <td>$250</td>
+                </tr>
+
+                <tr>
+                    <td>Hotel</td>
+                    <td>$320</td>
+                </tr>
+
+                <tr>
+                    <td>Food</td>
+                    <td>$150</td>
+                </tr>
+
+                <tr>
+                    <td>Transport</td>
+                    <td>$80</td>
+                </tr>
+
+                <tr>
+                    <td>Activities</td>
+                    <td>$200</td>
+                </tr>
+
+            </table>
+
+            <div class="total">
+                Total: $1,000
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
